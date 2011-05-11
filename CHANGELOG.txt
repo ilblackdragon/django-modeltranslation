@@ -1,0 +1,86 @@
+  ADDED: Jquery-ui based admin support for tabbed translation fields.
+         (thanks to jaap and adamsc, resolves issue 39)
+  ADDED: CSS class to identify a translation field and the default translation
+         field in admin.
+         (thanks to jaap)
+  ADDED: Configurable default value per field instance.
+         (thanks to bmihelac, resolves issue 28)
+  ADDED: Setting to override the default language.
+         (thanks to jaap, resolves issue 2)
+
+CHANGED: Improved performance of update_translation_fields command.
+         (thanks to adamsc, resolves issue 43)
+CHANGED: Factored out settings into a separate settings.py and consistently
+         used an app specific settings prefix.
+CHANGED: Refactored creation of translation fields and added handling of
+         supported fields.
+         (resolves issue 37)
+
+  FIXED: Clearing the default translation field in admin does not clear the
+         original field.
+         (resolves issue 47)
+  FIXED: In some setups appears "This field is required" error for the
+         original field.
+         (resolves issue 5)
+  FIXED: Translations are not saved for tinymce HTMLField when using jquery
+         tabs.
+         (thanks to kottenator, resolves issue 41)
+  FIXED: Fieldname isn't ensured to be string.
+         (resolves issue 41)
+  FIXED: Kept backwards compatibility with Django-1.0.
+         (thanks to jaap, resolves issue 34)
+  FIXED: Regression in south_field_triple caused by r55.
+         (thanks to jaap, resolves issue 29)
+  FIXED: TranslationField pre_save does not get the default language
+         correctly.
+         (thanks to jaap, resolves issue 31)
+
+v0.2
+====
+Date: 2010-06-15
+Packaged from revision 57.
+
+  ADDED: Support for admin prepopulated_fields.
+         (resolves issue 21)
+  ADDED: Support for admin list_editable.
+         (thanks carl.j.meyer, resolves issue 20)
+  ADDED: Preserve the formfield widget of the translated field.
+         (thanks piquadrat)
+  ADDED: Initial support for django-south.
+         (thanks andrewgodwin, resolves issue 11)
+  ADDED: Support for admin inlines, common and generic.
+         (resolves issue 12 and issue 18)
+
+  FIXED: Admin form validation errors with empty translated values and
+         unique=True.
+         (thanks to adamsc, resolves issue 26)
+  FIXED: Mangling of untranslated prepopulated fields.
+         (thanks to carl.j.meyer, resolves issue 25)
+  FIXED: Verbose names of translated fields are not translated.
+         (thanks to carl.j.meyer, resolves issue 24)
+  FIXED: Race condition between model import and translation registration in
+         production by ensuring that models are registered for translation
+         before TranslationAdmin runs.
+         (thanks to carl.j.meyer, resolves issue 19)
+  FIXED: Added workaround for swallowed ImportErrors by printing a traceback
+         explicitly.
+         (resolves issue 17)
+  FIXED: Only print debug statements to stdout if the runserver or
+         runserver_plus management commands are used.
+         (resolves issue 16)
+  FIXED: Removed print statements so that modeltranslation is usable with
+         mod_wsgi.
+         (resolves issue 7)
+  FIXED: Broken admin fields and fieldsets.
+         (thanks simoncelen, resolves issue 9)
+  FIXED: Creation of db fields with invalid python language code.
+         (resolves issue 4)
+  FIXED: Tests to run from any project.
+         (thanks carl.j.meyer, resolves issue 6)
+  FIXED: Removed unused dependency to content type which can break syncdb.
+         (thanks carl.j.meyer, resolves issue 1)
+
+v0.1
+====
+Date: 2009-02-22
+Initial release packaged from revision 19.

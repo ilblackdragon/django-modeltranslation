@@ -1,0 +1,10 @@
+AUTHORS
+=======
+Peter Eschler <peschler@gmail.com> (http://www.nmy.de)
+Dirk Eschler <eschler@gmail.com> (http://www.nmy.de)
+
+CONTRIBUTORS
+============
+Carl J. Meyer
+Jaap Roes
+Bojan Mihelac

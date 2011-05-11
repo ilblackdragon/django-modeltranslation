@@ -1,0 +1,8 @@
+build
+dist
+sitegen.egg-info
+.ropeproject
+.sass-cache
+*.pyc
+*.orig
+.svn/
